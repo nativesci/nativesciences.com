@@ -1,0 +1,59 @@
+body{
+	font-family:Lucida Sans Unicode, times, tahoma;
+	font-weight:;
+	color:black;
+	background: FAEBD7;
+	top:10px;
+	margin:25px;
+	border-width: 100px;
+	postion:relative;
+}
+
+a:link{color:blue}
+a:visited{color:blue;}
+a:hover{
+	background-color:#F4F6F6;
+	color:blue;
+	font-size:large;
+}
+
+h1 {font-family: tahoma,times;
+	font-style:italic;
+	text-decoration: underline;
+	color: #0066ff;
+	text-align: center;
+	margin:10px;
+	postion:absolute;
+	}
+
+
+h2,h3,h4 {font-family: tahoma,times;
+	color: 000000;
+	text-align: center;
+	margin:10px;
+	postion:absolute;
+	}
+
+title{
+	font-family:tahoma,
+	color:yellow;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  background-color: #D6DBDF;
+}

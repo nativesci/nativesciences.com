@@ -1,0 +1,1142 @@
+
+/* -------- General formatting -------- */
+
+body {
+	margin: 0px;
+	padding: 0px;
+  background-color: #E6E8E6;
+	font: 12px sans-serif;
+	color: #333333;
+}
+
+a {
+	color: #284D00;
+}
+
+/* -------- Page header -------- */
+
+#header {
+  display: block;
+  width: 100%;
+  height: 78px;
+  background: #9FAF8A url(../graphics/header-background.jpg) repeat-x 0px 0px;
+}
+
+#headertitle {
+  width: 100%;
+  height: 78px;
+  background: url(../graphics/header-title.png) no-repeat;
+}
+
+/* -------- Page menu and search bar -------- */
+
+#hmenubar {
+  z-index: 600;
+  display: block;
+  width: 100%;
+  height: 23px;
+  border-top: 3px solid #4D6633;
+  border-bottom: 3px solid #4D6633;
+  background-color: #C7D1B8;
+  overflow: hidden;
+  box-shadow: 0px 0px 9px #333333;
+  -webkit-box-shadow: 0px 0px 9px #333333;
+  -moz-box-shadow: 0px 0px 9px #333333;
+}
+
+.hmenuitem {
+  display: block;
+  float: left;
+  height: 23px;
+  padding: 0px 5px 0px 7px;
+  background: #C7D1B8 url(../graphics/menu-separator.png) no-repeat 0px 50%;
+  line-height: 23px;
+  color: #284D00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hmenuitemfirst {
+  display: block;
+  float: left;
+  height: 23px;
+  padding: 0px 5px 0px 7px;
+  background-color: #C7D1B8;
+  line-height: 23px;
+  color: #284D00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hmenuitem:hover {
+  color: #FFFFFF;
+}
+
+.hmenuitemfirst:hover {
+  color: #FFFFFF;
+}
+
+#searchbar {
+  z-index: 500;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  height: 62px;
+  overflow: hidden;
+  border-bottom: 1px solid #4D6633;
+  background: #EBECEB url(../graphics/summary-background.png);
+  box-shadow: 0px 0px 9px #333333;
+  -webkit-box-shadow: 0px 0px 9px #333333;
+  -moz-box-shadow: 0px 0px 9px #333333;
+}
+
+#searchbar_sections {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+#browsetab {
+  display: table-cell;
+  vertical-align: top;
+  width: 155px;
+  height: 63px;
+  border-right: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FDFFFA;
+  background-color: #DAE3CF; 
+  background: url(../graphics/searchheader-unhlt.png);
+}
+
+#browsetab:hover {
+  background: url(../graphics/searchheader-hlt.png);
+}
+
+#browsetext {
+  width: 154px;
+  height: 62px;
+  border-right: 1px solid #98A685;
+  border-bottom: 1px solid #FDFFFA;
+  background: url(../graphics/browse-text.png) no-repeat 50% 50%;
+}
+
+#browselink {
+  width: 154px;
+  height: 62px;
+  border-right: 1px solid #98A685;
+  border-bottom: 1px solid #FDFFFA;
+  background: url(../graphics/browse-back-text.png) no-repeat 50% 50%;
+  cursor: pointer;
+}
+
+#searchtab {
+  display: table-cell;
+  vertical-align: top;
+  width: 145px;
+  height: 62px;
+  border-right: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FDFFFA;
+  background-color: #DAE3CF; 
+  background: url(../graphics/searchheader-hlt.png);
+}
+
+#searchtab:hover {
+  background: url(../graphics/searchheader-hlt.png);
+}
+
+#searchtext {
+  width: 144px;
+  height: 62px;
+  border-right: 1px solid #98A685;
+  border-bottom: 1px solid #FDFFFA;
+  background: url(../graphics/search-text.png) no-repeat 50% 50%;
+}
+
+#searchlink {
+  width: 144px;
+  height: 62px;
+  border-right: 1px solid #98A685;
+  border-bottom: 1px solid #FDFFFA;
+  background: url(../graphics/search-back-text.png) no-repeat 50% 50%;
+  cursor: pointer;
+}
+
+.summarytext {
+  display: table-cell;
+  vertical-align: top;
+  padding: 13px 0px 0px 16px;
+  font-size: 12px;
+  color: #555555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+.summarytext_narrow {
+  display: block;
+  padding: 13px 13px 16px 13px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.recordcount {
+  font-size: 15px;
+}
+
+#searchbuttonwrap {
+  display: table-cell;
+  vertical-align: top;
+  width: 163px;
+  height: 62px;
+}
+
+/* -------- Search page Layout-------- */
+
+@media (min-width: 1100px)
+{
+  .showifwide {
+    display: block;
+    width: 100%;
+  }
+  .showifnarrow {
+    display: none;
+  }
+  
+  .searchsection {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-bottom: 1px solid #B3B5B3;
+  }
+
+  .searchsection_main {
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+    border-right: 1px solid #B3B5B3;
+  }
+
+  .searchsection_side {
+    display: table-cell;
+    vertical-align: top;
+    width: 280px;
+    height: 100%;
+    border-left: 1px solid #FFFFFF;
+    font-size: 12px;
+    color: #555555;
+  }
+
+  .searchpanel_wrap {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .searchpanel_left {
+    display: table-cell;
+    vertical-align: top;
+    width: 450px;
+  }
+  .searchpanel_left_borders {
+    border-right: 1px solid #B3B5B3;
+    border-bottom: 1px solid #B3B5B3;
+  }
+
+  .searchpanel_right {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .searchpanel_right_borders {
+    border-left: 1px solid #FFFFFF;
+    border-bottom: 1px solid #B3B5B3;
+  }
+
+  .searchform_label {
+    width: 430px;
+    margin: 12px;
+    font-size: 12px;
+    color: #555555;
+  }
+
+  .searchform_map {
+    position: relative;
+    display: block;
+    height: 100%;
+    margin: 12px;
+    font-size: 12px;
+    color: #555555;
+  }
+  
+  .searchoptionswrap {}
+  .searchoptions {}
+  .searchformat { margin-top: 24px; }
+
+  .searchform_herbaria {
+    width: 450px;
+    border-top: 1px solid #FFFFFF;
+    font-size: 12px;
+    color: #555555;
+  }
+
+  .searchform_operators {
+    width: auto;
+    border-top: 1px solid #FFFFFF;
+    font-size: 12px;
+    color: #555555;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1099px)
+{
+  .showifwide {
+    display: block;
+    width: 100%;
+  }
+  .showifnarrow {
+    display: none;
+  }
+  
+  .searchsection {
+    display: block;
+    width: 100%;
+  }
+
+  .searchsection_main {
+    display: block;
+    width: 100%;
+  }
+
+  .searchsection_side {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    color: #555555;
+  }
+
+  .searchpanel_wrap {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .searchpanel_left {
+    display: table-cell;
+    vertical-align: top;
+    width: 450px;
+  }
+  .searchpanel_left_borders {
+    border-right: 1px solid #B3B5B3;
+    border-bottom: 1px solid #B3B5B3;
+  }
+
+  .searchpanel_right {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .searchpanel_right_borders {
+    border-left: 1px solid #FFFFFF;
+    border-bottom: 1px solid #B3B5B3;
+  }
+
+  .searchform_label {
+    display: block;
+    margin: 12px;
+    font-size: 12px;
+    color: #555555;
+  }
+
+  .searchform_map {
+    position: relative;
+    width: auto;
+    height: 95%;
+    margin: 12px;
+    font-size: 12px;
+    color: #555555;
+  }
+  
+  .searchoptionswrap {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #B3B5B3;
+  }
+  
+  .searchoptions {
+    display: table-cell;
+    vertical-align: top;
+    width: 450px;
+  }
+  
+  .searchformat {
+    display: table-cell;
+    width: auto;
+    vertical-align: top;
+    padding-bottom: 16px;
+  }
+
+  .searchform_herbaria {
+    width: 450px;
+    border-top: 1px solid #FFFFFF;
+    font-size: 12px;
+    color: #555555;
+  }
+
+  .searchform_operators {
+    width: auto;
+    border-top: 1px solid #FFFFFF;
+    font-size: 12px;
+    color: #555555;
+  }
+}
+
+@media (max-width: 799px)
+{
+  .showifwide {
+    display: none;
+  }
+  .showifnarrow {
+    display: block;
+    width: 100%;
+  }
+  .searchsection {
+    display: block;
+    width: 100%;
+  }
+
+  .searchsection_main {
+    display: block;
+    width: 100%;
+  }
+
+  .searchsection_side {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    color: #555555;
+  }
+
+  .searchpanel_wrap {
+    display: block;
+    width: 100%;
+  }
+
+  .searchpanel_left {
+    display: block;
+    width: 100%;
+  }
+  .searchpanel_left_borders {
+  }
+
+  .searchpanel_right {
+    display: block;
+    width: 100%;
+  }
+  .searchpanel_right_borders {
+  }
+
+  .searchform_label {
+    display: block;
+    padding: 12px 12px 36px 12px;
+    border-bottom: 1px solid #B3B5B3;
+    font-size: 12px;
+    color: #555555;
+  }
+
+  .searchform_map {
+    position: relative;
+    display: block;
+    padding: 24px 16px 24px 16px;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #B3B5B3;
+    font-size: 12px;
+    color: #555555;
+  }
+  
+  .searchoptionswrap {
+    display: block;
+    width: 100%;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #B3B5B3;
+  }
+  
+  .searchoptions {
+    float: left;
+    minwidth: 300px;
+    padding: 0px 16px 16px 0px;
+    font-size: 1.2em;
+  }
+  
+  .searchformat {
+    float: left;
+    minwidth: 300px;
+    padding-bottom: 16px;
+    font-size: 1.2em;
+  }
+
+  .searchform_herbaria {
+    display: block;
+    width: 100%;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #B3B5B3;
+    padding-bottom: 16px;
+    font-size: 1.2em;
+    color: #555555;
+  }
+
+  .searchform_operators {
+    display: block;
+    width: 100%;
+    border-top: 1px solid #FFFFFF;
+    font-size: 1.2em;
+    color: #555555;
+  }
+}
+
+/* -------- Search page Layout-------- */
+
+#searchboxleft {
+  position: absolute;
+  top: 171px;
+  left: 0px;
+  width: 903px;
+  border-right: 1px solid #FFFFFF;
+}
+
+#searchboxleftinner {
+  position: relative;
+  width: 902px;
+  border-right: 1px solid #B3B5B3;
+  background-color: #DEE0DE;
+}
+
+#searchboxright {
+  position: absolute;
+  top: 171px;
+  left: 904px;
+  width: 280px;
+  font-size: 12px;
+  color: #555555;
+}
+
+#labelsearch {
+  position: relative;
+  float: left;
+  width: 450px;
+  height: 524px;
+  border-right: 1px solid #B3B5B3;
+  border-bottom: 1px solid #B3B5B3;
+  font-size: 12px;
+  color: #555555;
+}
+
+#mapsearch {
+  position: relative;
+  float: left;
+  width: 450px;
+  height: 524px;
+  border-left: 1px solid #FFFFFF;
+  border-bottom: 1px solid #B3B5B3;
+  font-size: 12px;
+  color: #555555;
+}
+
+#herbariasearch {
+  position: relative;
+  clear: both;
+  float: left;
+  width: 450px;
+  margin-bottom: 30px;
+  border-top: 1px solid #FFFFFF;
+  font-size: 12px;
+  color: #555555;
+}
+
+#searchhints {
+  position: relative;
+  float: left;
+  width: 452px;
+  margin-bottom: 30px;
+  border-top: 1px solid #FFFFFF;
+  font-size: 12px;
+  color: #555555;
+}
+
+/* -------- Search box headers and menus -------- */
+
+@media (min-width: 800px)
+{
+  .searchboxheader {
+    font-size: 11px;
+    color: #444444;
+    margin: 0px 15px 0px 82px;
+  }
+}
+
+@media (max-width: 799px)
+{
+  .searchboxheader {
+    font-size: 1.1em;
+    color: #444444;
+    margin: 0px 15px 0px 82px;
+  }
+}
+
+.searchboxicon {
+  float: left;
+  width: 72px;
+  height: 58px;
+  margin: 0px 0px 0px 0px;
+}
+
+.searchboxtitle1 {
+  font-size: 22px;
+  color: #607348;
+  margin-bottom: 4px;
+}
+
+.searchboxtitle2 {
+  font-size: 22px;
+  color: #607348;
+  margin: 15px 10px 10px 15px;
+}
+
+#labelsearchbuttons {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 32px;
+  border-top: 1px solid #BFBFBF;
+  border-bottom: 1px solid #BFBFBF;
+  margin: 10px 0px 0px 0px;
+  font-size: 16px;
+}
+
+#mapsearchbuttons {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 32px;
+  border-top: 1px solid #BFBFBF;
+  margin: 10px 0px 0px 0px;
+  font-size: 16px;
+}
+
+.searchboxbuttonleft {
+  display: table-cell;
+  height: 24px;
+  padding-left: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+.searchboxbuttonright {
+  display: table-cell;
+  height: 24px;
+  padding-right: 2px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+.searchboxbutton {
+  float: left;
+  height: 24px;
+  margin: 5px 15px 0px 0px;
+  padding: 0px 6px 0px 28px;
+  line-height: 23px;
+  color: #607348;
+  cursor: pointer;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.searchboxbutton:hover {
+  background-color: #D7E0CA;
+  -moz-box-shadow: 0px 0px 2px #888888;
+  -webkit-box-shadow: 0px 0px 2px #888888;
+  box-shadow: 0px 0px 2px #888888;
+}
+
+.searchboxbuttonselected {
+  background-color: #C9D6B6;
+  -moz-box-shadow: 0px 0px 2px #888888;
+  -webkit-box-shadow: 0px 0px 2px #888888;
+  box-shadow: 0px 0px 2px #888888;
+}
+
+.addquery {
+  background-image: url(../graphics/add-icon.png);
+  background-repeat: no-repeat;
+  background-position: 4px 3px;
+}
+.clearqueries {
+  background-image: url(../graphics/remove-icon.png);
+  background-repeat: no-repeat;
+  background-position: 4px 3px;
+}
+.querylisttoggle {
+  background-image: url(../graphics/dropdown-down.png);
+  background-repeat: no-repeat;
+  background-position: 4px 3px;
+}
+
+.mapcreatepolygon {
+  background-image: url(../graphics/polygon-icon.png);
+  background-repeat: no-repeat;
+  background-position: 4px 3px;
+}
+.mapremovepolygons {
+  background-image: url(../graphics/remove-icon.png);
+  background-repeat: no-repeat;
+  background-position: 4px 3px;
+}
+
+#toggle {
+  background: url(../graphics/dropdown-down.png) no-repeat 0px 5px;
+}
+
+/* -------- Label Form -------- */
+
+@media (min-width: 800px)
+{
+  .grid {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+  .grid_inline {
+    display: table;
+  }
+  .grid_cell {
+    display: table-cell;
+  }
+  .grid_2col {
+    width: 50%;
+  }
+  .grid_2col_padnarrow {
+    width: 50%;
+  }
+  .grid_3col {
+    width: 33%;
+  }
+  
+  .formblock {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+  .formblock_label {
+    display: table-cell;
+    width: 90px;
+    vertical-align: top;
+    text-align: right;
+    padding: 4px 3px 0px 0px;
+  }
+  .formblock_content {
+    display: table-cell;
+    width: auto;
+    vertical-align: top;
+  }
+  
+  .label_toppad { height: 15px; }
+  .label_taxonomy { width: 70px; }
+  .label_elevation { width: 75px; }
+  .label_collnumber { width: 90px; }
+  .label_date { width: 80px; }
+  .label_accession { width: 120px; }
+  .label_identifier { width: 120px; }
+  
+  .formlabel {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+  }
+
+  .formfield {
+    padding: 2px 3px 2px 0px;
+    font-size: 12px;
+    color: #333333;
+  }
+
+  .formstacked {
+    float: left;
+    padding-right: 3px;
+    font-size: 11px;
+    color: #333333;
+  }
+
+  .formselect {
+    width: 100%;
+    height: 22px;
+    border: 1px solid #607348;
+    font-size: 12px;
+    color: #333333;
+    box-sizing: border-box;
+  }
+
+  .formtextbox {
+    width: 100%;
+    height: 22px;
+    padding: 2px 3px 2px 0px;
+    border: 1px solid #607348;
+    font-size: 12px;
+    color: #333333;
+    box-sizing: border-box;
+  }
+
+  .formspacer {
+    clear: both;
+    height: 10px;
+  }
+
+  .checkbox {
+    margin: 8px 3px 0px 30px;
+  }
+
+  .radiobutton {
+    margin: 8px 3px 0px 30px;
+  }
+
+  #querylistdropdown {
+    width: 100%;
+    margin-top: 16px;
+    border: 1px solid #4D6633;
+    background-color: #F6F6F6;
+  }
+
+  #querylisttitle {
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #607348;
+  }
+
+  #querylist{
+    padding: 0px 15px 15px 15px;
+  }
+}
+
+@media (max-width: 799px)
+{
+  .grid {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+  .grid_inline {
+    display: table;
+  }
+  .grid_cell {
+    display: table-cell;
+  }
+  .grid_2col {
+    width: 50%;
+  }
+  .grid_2col_padnarrow {
+    width: 46%;
+    padding-right: 4%;
+  }
+  .grid_3col {
+    width: 33%;
+  }
+  
+  .formblock {
+    display: block;
+    width: 100%;
+  }
+  .formblock_label {
+    display: block;
+    width: 100%;
+    font-size: 1.4em;
+  }
+  .formblock_content {
+    display: block;
+    width: 100%;
+    font-size: 1.4em;
+  }
+  
+  .label_toppad { height: 0px; }
+  .label_taxonomy { width: 100px; }
+  .label_elevation { width: 85px; }
+  .label_collnumber { width: 120px; }
+  .label_date { width: 120px; }
+  .label_accession { width: 160px; }
+  .label_identifier { width: 160px; }
+  
+  .formlabel {
+    margin: 3px 0px 3px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+  }
+
+  .formfield {
+    padding: 2px 3px 2px 0px;
+    color: #333333;
+  }
+
+  .formstacked {
+    float: left;
+    padding-right: 4px;
+    font-size: 1.2em;
+    color: #333333;
+  }
+
+  .formselect {
+    width: 100%;
+    height: 28px;
+    border: 1px solid #607348;
+    font-size: 1.1em;
+    color: #333333;
+    box-sizing: border-box;
+  }
+
+  .formtextbox {
+    width: 100%;
+    height: 28px;
+    padding: 2px 3px 2px 0px;
+    border: 1px solid #607348;
+    font-size: 1.1em;
+    color: #333333;
+    box-sizing: border-box;
+  }
+
+  .formspacer {
+    clear: both;
+    height: 16px;
+  }
+
+  .checkbox {
+    margin: 8px 3px 0px 30px;
+  }
+
+  .radiobutton {
+    margin: 8px 3px 0px 30px;
+  }
+
+  #querylistdropdown {
+    width: 100%;
+    margin-top: 16px;
+    border: 1px solid #4D6633;
+    background-color: #F6F6F6;
+  }
+
+  #querylisttitle {
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #607348;
+  }
+
+  #querylist{
+    padding: 0px 15px 15px 15px;
+  }
+}
+
+/* -------- Search Map -------- */
+
+#searchmapcontainer {
+  position: relative;
+  display: block;
+  height: 392px;
+  margin: 3px 0px 0px 0px;
+  border: 1px solid #BFBFBF;
+  background-color: #B8CFE5;
+}
+
+#searchmap {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+#searchmapshadowtop {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 9px;
+  background: url(../graphics/shadow-9-down.png) repeat-x 0px 0px;
+}
+
+#searchmapshadowleft {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 9px;
+  background: url(../graphics/shadow-9-right.png) repeat-y 0px 0px;
+}
+
+#searchmapshadowright {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 9px;
+  background: url(../graphics/shadow-9-left.png) repeat-y 0px 0px;
+}
+
+#searchmapshadowbottom {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 9px;
+  background: url(../graphics/shadow-9-up.png) repeat-x 0px 0px;
+}
+
+#maplayertoggle {
+  z-index: 13;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 60px;
+  height: 15px;
+  overflow: hidden;
+  padding: 4px 4px 4px 22px;
+  border: 1px solid #BFBFBF;
+  color: #607348;
+  font-weight: bold;
+  cursor: pointer;
+  background: #F5F5F5 url(../graphics/dropdown-down.png) no-repeat 0px 3px;
+  -moz-box-shadow: 0px 0px 9px #666666;
+  -webkit-box-shadow: 0px 0px 9px #666666;
+  box-shadow: 0px 0px 9px #666666;
+}
+
+#maplayerdropdown {
+  z-index: 12;
+  visibility: hidden;
+  position: absolute;
+  top: 36px;
+  right: 12px;
+  width: 86px;
+  height: 100px;
+  overflow: hidden;
+  border-left: 1px solid #BFBFBF;
+  border-right: 1px solid #BFBFBF;
+  background-color: #FFFFFF;
+  -moz-box-shadow: 0px 0px 9px #666666;
+  -webkit-box-shadow: 0px 0px 9px #666666;
+  box-shadow: 0px 0px 9px #666666;
+}
+
+.maplayeritem {
+  width: 76px;
+  height: 15px;
+  padding: 4px 0px 4px 10px;
+  border-bottom: 1px solid #BFBFBF;
+  color: #607348;
+  cursor: pointer;
+}
+
+.maplayeritem:hover {
+  background-color: #EBF1E0;
+}
+
+
+/* -------- Popup Box (messages) -------- */
+
+.messagebox {
+  z-index: 30;
+  visibility: hidden;
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  width: 400px;
+  height: 180px;
+  margin-left: -200px;
+  border: 1px solid #8D997A;
+  background-color: #FFEBB2;
+  -moz-box-shadow: 0px 0px 9px #666666;
+  -webkit-box-shadow: 0px 0px 9px #666666;
+  box-shadow: 0px 0px 9px #666666;
+}
+
+.messageboxheader {
+  width: 100%;
+  height: 26px;
+  background-color: #FFBB00;
+  border-bottom: 1px solid #8D997A;
+}
+
+.messageboxtitle {
+  margin-left: 6px;
+	font: 14px sans-serif;
+	line-height: 26px;
+	font-weight: bold;
+	color: #333333;
+}
+
+.messageboxclose {
+  float: right;
+  padding: 0px 6px 0px 6px;
+	font: 30px sans-serif;
+	line-height: 22px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.messageboxcontent {
+  width: 350px;
+  height: 128px;
+  padding: 25px 25px 0px 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #333333;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+/* -------- Footer -------- */
+
+#footer {
+  margin: 24px 15px 36px 15px;
+  padding-top: 12px;
+  border-top: 1px solid #BFBFBF;
+}
+
+.footerlarge {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #444444;
+}
+
+.footersmall {
+  font-size: 0.8em;
+  color: #444444;
+}
+
+.footerlink {
+  color: #444444;
+}
+
+/* -------- Login dropdown box (defined here instead of in login.css so it can be styled separately) -------- */
+
+#logindropdown {
+  visibility: hidden;
+	z-index: 30;
+  position: absolute;
+  right: 0px;
+  top: 107px;
+  width: 184px;
+  height: 250px;
+  border-left: 1px solid #4D6633;
+  border-bottom: 1px solid #4D6633;
+  background-color: #CED6C1;
+  -moz-box-shadow: 0px 2px 9px #666666;
+  -webkit-box-shadow: 0px 2px 9px #666666;
+  box-shadow: 0px 2px 9px #666666;
+  overflow: hidden;
+}
